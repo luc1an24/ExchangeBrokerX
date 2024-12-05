@@ -55,7 +55,7 @@ class Program
             Console.WriteLine("Best Execution Plan:");
             foreach (var order in executionPlan)
             {
-                Console.WriteLine($"Amount: {order.Amount}, Price: {order.Price}, Type: {orderType}");
+                Console.WriteLine($"Exchange: {order.Exchange}, Amount: {order.Amount}, Price: {order.Price}, Type: {orderType}");
             }
         }
         catch (Exception ex)

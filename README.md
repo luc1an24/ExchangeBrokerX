@@ -47,8 +47,12 @@ Before you begin, make sure that the following tools are installed on your local
   ```bash
   dotnet build
   dotnet run
+  ```
 
+3. **Insert arguments**
   When asked to enter the paths to files, use relative paths. You can use
+
   ```bash
   ../orderBooks.json
   ../exchangesBalance.json
+

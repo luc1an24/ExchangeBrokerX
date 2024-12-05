@@ -3,7 +3,7 @@
     public class Order
     {
         public required string Type { get; set; }
-        public float Amount { get; set; }
-        public float Price { get; set; }
+        public double Amount { get; set; }
+        public double Price { get; set; }
     }
 }

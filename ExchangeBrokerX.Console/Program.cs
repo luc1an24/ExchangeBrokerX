@@ -49,7 +49,7 @@ class Program
         {
             var orderBooks = FileLoader.LoadOrderBooks(orderBookFilePath);
             var exchangeBalances = FileLoader.LoadExchangeBalances(exchangeBalanceFilePath);
-            
+
             var executionPlan = ExchangeBrokerXService.GetBestExecution(orderBooks, exchangeBalances, orderType, amount);
 
             Console.WriteLine("Best Execution Plan:");

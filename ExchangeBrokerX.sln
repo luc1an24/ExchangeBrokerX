@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeBrokerX.Console", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeBrokerX.Core", "ExchangeBrokerX.Core\ExchangeBrokerX.Core.csproj", "{7A219F8C-D56B-451A-9077-04FA00D7A5A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.ExchangeBrokerX", "Tests.ExchangeBrokerX\Tests.ExchangeBrokerX.csproj", "{02623BBA-B2FD-4A28-ABF4-8168857874B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7A219F8C-D56B-451A-9077-04FA00D7A5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A219F8C-D56B-451A-9077-04FA00D7A5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A219F8C-D56B-451A-9077-04FA00D7A5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02623BBA-B2FD-4A28-ABF4-8168857874B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02623BBA-B2FD-4A28-ABF4-8168857874B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02623BBA-B2FD-4A28-ABF4-8168857874B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02623BBA-B2FD-4A28-ABF4-8168857874B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

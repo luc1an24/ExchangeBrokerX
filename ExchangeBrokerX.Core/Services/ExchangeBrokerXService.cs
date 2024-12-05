@@ -2,7 +2,7 @@
 
 namespace ExchangeBrokerX.Core.Logic
 {
-    public class ExchageBrokerXService
+    public class ExchangeBrokerXService
     {
         public static List<ExecutionPlan> GetBestExecution(
             List<OrderBook> orderBooks,

@@ -8,3 +8,6 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
+    volumes:
+      - ./orderBooks.json:/app/orderBooks.json
+      - ./exchangesBalance.json:/app/exchangesBalance.json

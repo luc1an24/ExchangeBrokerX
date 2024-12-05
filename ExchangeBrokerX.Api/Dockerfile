@@ -10,7 +10,6 @@ COPY --from=core /src/ExchangeBrokerX.Core ./ExchangeBrokerX.Core
 RUN dotnet restore ./ExchangeBrokerX.Api/ExchangeBrokerX.Api.csproj
 RUN dotnet publish ./ExchangeBrokerX.Api/ExchangeBrokerX.Api.csproj -c Release -o /out
 
-COPY ./orderBooks.json ./exchangesBalance.json /app/
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app

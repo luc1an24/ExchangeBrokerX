@@ -35,3 +35,20 @@ Before you begin, make sure that the following tools are installed on your local
 
 4. **Verify the Services**:
    Once the services are up, verify that they are running correctly. Navigate to application swagger webpage: [http://localhost:8080/swagger/index.html](http://localhost:8080/swagger/index.html)
+
+## Console setup
+
+1. **Open command prompt**
+   Open command prompt at Console directory (ExchangeBrokerX\ExchangeBrokerX.Console)
+
+2. **Build & run project**
+  Run net build to build project. To do so, run:
+
+  ```bash
+  dotnet build
+  dotnet run
+
+  When asked to enter the paths to files, use relative paths. You can use
+  ```bash
+  ../orderBooks.json
+  ../exchangesBalance.json

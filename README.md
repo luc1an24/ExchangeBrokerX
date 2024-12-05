@@ -1,6 +1,7 @@
 # ExchangeBrokerX
 
 Project used to get optimal exchanges from order books provided in json.
+Test data is available in orderBooks.json and exchangesBalance.json.
 
 ## Prerequisites
 

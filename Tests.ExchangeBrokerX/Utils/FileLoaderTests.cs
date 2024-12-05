@@ -9,16 +9,17 @@ namespace Tests.ExchangeBrokerX.Utils
         {
             var filePath = "testOrderBook.json";
             var jsonContent = @"[
-            {
-                ""Exchange"": 1,
-                ""Asks"": [{ ""Price"": 30000, ""Amount"": 1 }],
-                ""Bids"": [{ ""Price"": 31000, ""Amount"": 1 }]
-            },
-            {
-                ""Exchange"": 2,
-                ""Asks"": [{ ""Price"": 30000, ""Amount"": 1 }],
-                ""Bids"": [{ ""Price"": 31000, ""Amount"": 1 }]
-            }]";
+                {
+                    ""Exchange"": 1,
+                    ""Asks"": [{ ""Order"": { ""Price"": 30000, ""Amount"": 1 } }],
+                    ""Bids"": [{ ""Order"": { ""Price"": 31000, ""Amount"": 1 } }]
+                },
+                {
+                    ""Exchange"": 2,
+                    ""Asks"": [{ ""Order"": { ""Price"": 30000, ""Amount"": 1 } }],
+                    ""Bids"": [{ ""Order"": { ""Price"": 31000, ""Amount"": 1 } }]
+                }
+            ]";
 
             File.WriteAllText(filePath, jsonContent);
 

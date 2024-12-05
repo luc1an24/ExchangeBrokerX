@@ -27,7 +27,7 @@ namespace ExchangeBrokerX.Api.Controllers
                 }
 
                 var orderBook = FileLoader.LoadOrderBooks("orderBooks.json");
-                var exchangeBalances = FileLoader.LoadExchangeBalances("exchangeBalances.json");
+                var exchangeBalances = FileLoader.LoadExchangeBalances("exchangesBalance.json");
 
                 var executionPlan = ExchangeBrokerXService.GetBestExecution(orderBook, exchangeBalances, request.OrderType, request.Amount);
 

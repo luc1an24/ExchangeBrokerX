@@ -1,4 +1,5 @@
 ﻿using ExchangeBrokerX.Core.Models;
+using ExchangeBrokerX.Core.Utils;
 using Newtonsoft.Json;
 
 namespace ExchangeBrokerX.Core.Utilities
@@ -14,7 +15,12 @@ namespace ExchangeBrokerX.Core.Utilities
 
                 var json = File.ReadAllText(filePath);
 
-                var orderBooks = JsonConvert.DeserializeObject<List<OrderBook>>(json);
+                var settings = new JsonSerializerSettings
+                {
+                    Converters = new List<JsonConverter> { new OrderBookConverter() }
+                };
+
+                var orderBooks = JsonConvert.DeserializeObject<List<OrderBook>>(json, settings);
 
                 if (orderBooks == null)
                     throw new InvalidDataException("The file content is not a valid list of order books.");

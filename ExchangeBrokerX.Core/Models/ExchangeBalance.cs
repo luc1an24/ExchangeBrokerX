@@ -2,7 +2,7 @@
 {
     public class ExchangeBalance
     {
-        public required string Exchange { get; set; }
+        public int Exchange { get; set; }
         public double EURBalance { get; set; }
         public double BTCBalance { get; set; }
     }

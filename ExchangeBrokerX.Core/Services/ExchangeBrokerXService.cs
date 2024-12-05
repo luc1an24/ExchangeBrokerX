@@ -18,23 +18,12 @@ namespace ExchangeBrokerX.Core.Logic
             var isBuyOrder = orderType.ToLower() == "buy";
             var remainingAmount = amount;
 
-            var aggregatedOrders = new List<(int Exchange, double Price, double Amount, string Type)>();
-
-            foreach (var orderBook in orderBooks)
-            {
-                var exchange = orderBook.Exchange;
-
-                if (isBuyOrder)
-                {
-                    aggregatedOrders.AddRange(orderBook.Asks.Select(f => (exchange, f.Price, f.Amount, "sell")));
-                }
-                else
-                {
-                    aggregatedOrders.AddRange(orderBook.Bids.Select(f => (exchange, f.Price, f.Amount, "buy")));
-                }
-            }
-
-            aggregatedOrders = isBuyOrder ? aggregatedOrders.OrderBy(f => f.Price).ToList() : aggregatedOrders.OrderByDescending(f => f.Price).ToList();
+            var aggregatedOrders = orderBooks
+                .SelectMany(orderBook => isBuyOrder
+                ? orderBook.Asks.Select(ask => (orderBook.Exchange, ask.Price, ask.Amount, "sell"))
+                : orderBook.Bids.Select(bid => (orderBook.Exchange, bid.Price, bid.Amount, "buy")))
+                .OrderBy(order => isBuyOrder ? order.Price : -order.Price)
+                .ToList();
 
             foreach (var order in aggregatedOrders)
             {
